@@ -1,0 +1,31 @@
+strings:
+  inputs:
+    - Chainestery/Resources/Localization
+  outputs:
+    - templateName: structured-swift5
+      output: Chainestery/Resources/Localization/Strings.generated.swift
+      params:
+        enumName: Strings
+
+xcassets:
+  - inputs:
+    - Chainestery/Resources/Images
+    outputs:
+      - templateName: swift5
+        output: Chainestery/Resources/Images/Images.generated.swift
+  - inputs:
+    - Chainestery/Resources/Colors/Colors.xcassets
+    outputs:
+      - templateName: swift5
+        output: Chainestery/Resources/Colors/Colors.generated.swift
+        params:
+          enumName: Colors
+          
+fonts:
+  - inputs: Chainestery/Resources/Fonts
+    outputs:
+    - templateName: swift5
+      output: Chainestery/Resources/Fonts/Fonts.generated.swift
+      params:
+        enumName: Fonts
+
