@@ -33,6 +33,7 @@ extension RootContentView {
 extension RootContentView {
     enum ViewState: String {
         case onboarding
+        case privacy
         case main
     }
 }

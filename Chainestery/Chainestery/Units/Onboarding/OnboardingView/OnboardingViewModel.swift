@@ -8,6 +8,12 @@ extension OnboardingView {
         @Published var isAnimatingImageOpacity = false
         @Published var showPrivacyPolicy = false
         let privacyPolicyURL = URL(string: "https://tradifundint.info")
+        
+        func showPrivacyFlow(rootViewModel: RootContentView.RootContentViewModel) {
+            DispatchQueue.main.async {
+                rootViewModel.setFlow(.privacy)
+            }
+        }
     }
     
     enum OnboardingItem: Int, CaseIterable {

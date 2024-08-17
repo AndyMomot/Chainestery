@@ -48,6 +48,15 @@
 		474D63AD2C6FB88F00EBF478 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D63A82C6FB88F00EBF478 /* OnboardingView.swift */; };
 		474D63AE2C6FB88F00EBF478 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D63A92C6FB88F00EBF478 /* OnboardingViewModel.swift */; };
 		474D63AF2C6FB88F00EBF478 /* OnboardingViewTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D63AB2C6FB88F00EBF478 /* OnboardingViewTabView.swift */; };
+		476894402C7097AA007FDE48 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4768943F2C7097AA007FDE48 /* PrivacyPolicyView.swift */; };
+		476894422C7097BA007FDE48 /* PrivacyPolicyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476894412C7097BA007FDE48 /* PrivacyPolicyViewModel.swift */; };
+		476894462C70A303007FDE48 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476894452C70A303007FDE48 /* HomeView.swift */; };
+		476894482C70A30B007FDE48 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476894472C70A30B007FDE48 /* HomeViewModel.swift */; };
+		4768944B2C70AD30007FDE48 /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4768944A2C70AD30007FDE48 /* HomeButtonView.swift */; };
+		4768944E2C70B4E7007FDE48 /* EmployersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4768944D2C70B4E7007FDE48 /* EmployersView.swift */; };
+		476894502C70B4F1007FDE48 /* EmployersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4768944F2C70B4F1007FDE48 /* EmployersViewModel.swift */; };
+		476894532C70B5CF007FDE48 /* NavigationBackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476894522C70B5CF007FDE48 /* NavigationBackButtonView.swift */; };
+		476894552C70B7AD007FDE48 /* UINavigationController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476894542C70B7AD007FDE48 /* UINavigationController+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +103,15 @@
 		474D63A82C6FB88F00EBF478 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		474D63A92C6FB88F00EBF478 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		474D63AB2C6FB88F00EBF478 /* OnboardingViewTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewTabView.swift; sourceTree = "<group>"; };
+		4768943F2C7097AA007FDE48 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		476894412C7097BA007FDE48 /* PrivacyPolicyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewModel.swift; sourceTree = "<group>"; };
+		476894452C70A303007FDE48 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		476894472C70A30B007FDE48 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4768944A2C70AD30007FDE48 /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
+		4768944D2C70B4E7007FDE48 /* EmployersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployersView.swift; sourceTree = "<group>"; };
+		4768944F2C70B4F1007FDE48 /* EmployersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployersViewModel.swift; sourceTree = "<group>"; };
+		476894522C70B5CF007FDE48 /* NavigationBackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackButtonView.swift; sourceTree = "<group>"; };
+		476894542C70B7AD007FDE48 /* UINavigationController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +174,8 @@
 				474D63012C6FB02000EBF478 /* RootContentView */,
 				474D639C2C6FB1EF00EBF478 /* Preloader */,
 				474D63A52C6FB88F00EBF478 /* Onboarding */,
+				4768943E2C709797007FDE48 /* PrivacyPolicy */,
+				476894432C70A267007FDE48 /* Main */,
 			);
 			path = Units;
 			sourceTree = "<group>";
@@ -255,6 +275,7 @@
 		474D636B2C6FB0D100EBF478 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				476894542C70B7AD007FDE48 /* UINavigationController+Additions.swift */,
 				474D636C2C6FB0D100EBF478 /* Double+Additions.swift */,
 				474D636D2C6FB0D100EBF478 /* Date+Additions.swift */,
 				474D636E2C6FB0D100EBF478 /* View+Additions.swift */,
@@ -285,6 +306,7 @@
 		474D63732C6FB0D100EBF478 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				476894512C70B5B8007FDE48 /* NavigationBackButton */,
 				474D63A12C6FB40E00EBF478 /* CustomProgressView */,
 				474D63762C6FB0D100EBF478 /* WebView */,
 			);
@@ -341,6 +363,59 @@
 				474D63AB2C6FB88F00EBF478 /* OnboardingViewTabView.swift */,
 			);
 			path = OnboardingViewTabView;
+			sourceTree = "<group>";
+		};
+		4768943E2C709797007FDE48 /* PrivacyPolicy */ = {
+			isa = PBXGroup;
+			children = (
+				4768943F2C7097AA007FDE48 /* PrivacyPolicyView.swift */,
+				476894412C7097BA007FDE48 /* PrivacyPolicyViewModel.swift */,
+			);
+			path = PrivacyPolicy;
+			sourceTree = "<group>";
+		};
+		476894432C70A267007FDE48 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				476894442C70A2F6007FDE48 /* Home */,
+				4768944C2C70B4D9007FDE48 /* Employers */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		476894442C70A2F6007FDE48 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				476894492C70AD24007FDE48 /* Views */,
+				476894452C70A303007FDE48 /* HomeView.swift */,
+				476894472C70A30B007FDE48 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		476894492C70AD24007FDE48 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4768944A2C70AD30007FDE48 /* HomeButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4768944C2C70B4D9007FDE48 /* Employers */ = {
+			isa = PBXGroup;
+			children = (
+				4768944D2C70B4E7007FDE48 /* EmployersView.swift */,
+				4768944F2C70B4F1007FDE48 /* EmployersViewModel.swift */,
+			);
+			path = Employers;
+			sourceTree = "<group>";
+		};
+		476894512C70B5B8007FDE48 /* NavigationBackButton */ = {
+			isa = PBXGroup;
+			children = (
+				476894522C70B5CF007FDE48 /* NavigationBackButtonView.swift */,
+			);
+			path = NavigationBackButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,11 +526,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476894462C70A303007FDE48 /* HomeView.swift in Sources */,
 				474D63042C6FB02000EBF478 /* RootContentViewModel.swift in Sources */,
 				474D639E2C6FB1FD00EBF478 /* PreloaderView.swift in Sources */,
 				474D62EC2C6FAE2000EBF478 /* RootViewController.swift in Sources */,
 				474D63902C6FB0D100EBF478 /* Double+Additions.swift in Sources */,
 				474D63962C6FB0D100EBF478 /* SwiftUIViewWebView.swift in Sources */,
+				4768944B2C70AD30007FDE48 /* HomeButtonView.swift in Sources */,
+				476894552C70B7AD007FDE48 /* UINavigationController+Additions.swift in Sources */,
 				474D63912C6FB0D100EBF478 /* Date+Additions.swift in Sources */,
 				474D637D2C6FB0D100EBF478 /* FileManagerService.swift in Sources */,
 				474D638E2C6FB0D100EBF478 /* Strings.generated.swift in Sources */,
@@ -466,13 +544,19 @@
 				474D63862C6FB0D100EBF478 /* Fonts.generated.swift in Sources */,
 				474D63812C6FB0D100EBF478 /* Colors.generated.swift in Sources */,
 				474D63AE2C6FB88F00EBF478 /* OnboardingViewModel.swift in Sources */,
+				476894532C70B5CF007FDE48 /* NavigationBackButtonView.swift in Sources */,
+				476894422C7097BA007FDE48 /* PrivacyPolicyViewModel.swift in Sources */,
 				474D63932C6FB0D100EBF478 /* String+Additions.swift in Sources */,
+				476894502C70B4F1007FDE48 /* EmployersViewModel.swift in Sources */,
 				474D62EA2C6FAE2000EBF478 /* SceneDelegate.swift in Sources */,
 				474D63942C6FB0D100EBF478 /* ImagePicker.swift in Sources */,
+				476894402C7097AA007FDE48 /* PrivacyPolicyView.swift in Sources */,
 				474D63052C6FB02000EBF478 /* RootContentView.swift in Sources */,
 				474D63A32C6FB41600EBF478 /* CustomProgressView.swift in Sources */,
+				476894482C70A30B007FDE48 /* HomeViewModel.swift in Sources */,
 				474D63AC2C6FB88F00EBF478 /* OnboardingSmallView.swift in Sources */,
 				474D637C2C6FB0D100EBF478 /* DefaultsService.swift in Sources */,
+				4768944E2C70B4E7007FDE48 /* EmployersView.swift in Sources */,
 				474D63AF2C6FB88F00EBF478 /* OnboardingViewTabView.swift in Sources */,
 				474D63AD2C6FB88F00EBF478 /* OnboardingView.swift in Sources */,
 			);

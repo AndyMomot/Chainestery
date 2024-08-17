@@ -19,8 +19,11 @@ struct RootContentView: View {
                 case .onboarding:
                     OnboardingViewTabView()
                         .environmentObject(viewModel)
+                case .privacy:
+                    PrivacyPolicyView()
+                        .environmentObject(viewModel)
                 case .main:
-                    Text("Home")
+                    HomeView()
                         .environmentObject(viewModel)
                 }
             }

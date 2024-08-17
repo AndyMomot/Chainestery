@@ -44,8 +44,12 @@ struct OnboardingView: View {
                         }
 
                         Button {
-                            withAnimation {
-                                currentPageIndex = item.next.rawValue
+                            if item == .third {
+                                viewModel.showPrivacyFlow(rootViewModel: rootViewModel)
+                            } else {
+                                withAnimation {
+                                    currentPageIndex = item.next.rawValue
+                                }
                             }
                         } label: {
                             Image(systemName: "arrow.right")
