@@ -1,0 +1,40 @@
+//
+//  NavigationBackButtonView.swift
+//  Chainestery
+//
+//  Created by Andrii Momot on 18.08.2024.
+//
+
+import SwiftUI
+
+struct NavigationBackButtonView: View {
+    @Environment(\.dismiss) private var dismiss
+    var title: String
+    var color: Color
+    
+    var body: some View {
+        HStack {
+            Button {
+                dismiss.callAsFunction()
+            } label: {
+                Image(systemName: "arrow.left")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 40)
+            }
+
+            Spacer()
+            
+            Text(title)
+            
+        }
+        .foregroundStyle(color)
+        .font(Fonts.KulimPark.bold.swiftUIFont(size: 30))
+    }
+}
+
+#Preview {
+    NavigationBackButtonView(title: "Back", color: .black)
+        .padding(.horizontal)
+}
+

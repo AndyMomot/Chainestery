@@ -38,8 +38,8 @@ struct EmployersView: View {
                 
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: bounds.width * 0.1) {
-                        ForEach(items, id: \.self) { item in
-                            Text("Item \(item)")
+                        ForEach(viewModel.employers) { employer in
+                            Text(employer.name)
                                 .frame(maxWidth: .infinity, minHeight: 100)
                                 .background(Color.blue)
                                 .foregroundColor(.white)
@@ -47,7 +47,7 @@ struct EmployersView: View {
                         }
                         
                         Button {
-                            viewModel.onPlus()
+                            viewModel.showAddEmployer.toggle()
                         } label: {
                             Asset.plus.swiftUIImage
                                 .resizable()
@@ -60,6 +60,12 @@ struct EmployersView: View {
                 }
                 .scrollIndicators(.never)
             }
+        }
+        .navigationDestination(isPresented: $viewModel.showAddEmployer) {
+            AddEmployerView(viewState: .create) {
+                viewModel.getEmployers()
+            }
+                .navigationBarBackButtonHidden()
         }
     }
 }
