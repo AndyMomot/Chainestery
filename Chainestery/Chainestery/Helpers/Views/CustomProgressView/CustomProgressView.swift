@@ -18,9 +18,7 @@ struct CustomProgressView: View {
                     .foregroundColor(Colors.silverGray.swiftUIColor)
                 
                 RoundedRectangle(cornerRadius: 8)
-                    .frame(
-                        width: min((progress * geometry.size.width) - 10,
-                                   geometry.size.width),
+                    .frame(width: max(0, min((progress * geometry.size.width) - 10, geometry.size.width)),
                         height: 11
                     )
                     .foregroundColor(Colors.redC.swiftUIColor)
