@@ -14,8 +14,6 @@ struct EmployersView: View {
         UIScreen.main.bounds
     }
     
-    let items = Array(1...3) // Sample data
-    
     let columns = [
         GridItem(.flexible(), spacing: 40),
         GridItem(.flexible(), spacing: 40)
@@ -37,13 +35,14 @@ struct EmployersView: View {
                 .padding(.horizontal)
                 
                 ScrollView {
-                    LazyVGrid(columns: columns, spacing: bounds.width * 0.1) {
+                    LazyVGrid(columns: columns, spacing: 40) {
                         ForEach(viewModel.employers) { employer in
-                            Text(employer.name)
-                                .frame(maxWidth: .infinity, minHeight: 100)
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
+                            Button {
+                                viewModel.employerToShow = employer
+                                viewModel.showEmployer.toggle()
+                            } label: {
+                                EmployerView(item: employer)
+                            }
                         }
                         
                         Button {
@@ -54,18 +53,28 @@ struct EmployersView: View {
                                 .scaledToFit()
                                 .frame(width: bounds.width * 0.14)
                         }
-
                     }
                     .padding(.horizontal)
                 }
                 .scrollIndicators(.never)
             }
         }
+        .onAppear {
+            viewModel.getEmployers()
+        }
         .navigationDestination(isPresented: $viewModel.showAddEmployer) {
             AddEmployerView(viewState: .create) {
                 viewModel.getEmployers()
             }
+            .navigationBarBackButtonHidden()
+        }
+        .navigationDestination(isPresented: $viewModel.showEmployer) {
+            if let item = viewModel.employerToShow {
+                AddEmployerView(viewState: .details(model: item)) {
+                    viewModel.getEmployers()
+                }
                 .navigationBarBackButtonHidden()
+            }
         }
     }
 }

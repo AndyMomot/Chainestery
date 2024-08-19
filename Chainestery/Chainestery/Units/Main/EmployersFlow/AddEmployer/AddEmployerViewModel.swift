@@ -22,10 +22,10 @@ extension AddEmployerView {
         }
         
         var isValidFields: Bool {
-            var isValidName = !name.isEmpty
-            var isValidPhoto = !phone.isEmpty
-            var isValidSalary = Double(salary) != nil && (Double(salary) ?? .zero > .zero)
-            var isValidPosition = !position.isEmpty
+            let isValidName = !name.isEmpty
+            let isValidPhoto = !phone.isEmpty
+            let isValidSalary = Double(salary) != nil && (Double(salary) ?? .zero > .zero)
+            let isValidPosition = !position.isEmpty
             
             return isValidName && isValidPhoto && isValidSalary && isValidPosition
         }
@@ -86,7 +86,8 @@ extension AddEmployerView {
         }
         
         private func getImage(for imageId: String) -> UIImage? {
-            guard let imageData = FileManagerService().getFile(forPath: imageId) else { return nil }
+            let path = FileManagerService.Keys.profileImage(id: imageId).path
+            guard let imageData = FileManagerService().getFile(forPath: path) else { return nil }
             return UIImage(data: imageData)
         }
         

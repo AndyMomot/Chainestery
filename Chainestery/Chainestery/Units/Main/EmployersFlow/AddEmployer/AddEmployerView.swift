@@ -66,6 +66,7 @@ struct AddEmployerView: View {
                                     Image(uiImage: viewModel.selectedImage)
                                         .resizable()
                                         .aspectRatio(contentMode: viewModel.isImageSelected ? .fill : .fit)
+                                        .padding(viewModel.isImageSelected ? .zero : 30)
                                         .frame(width: bounds.width * 0.3,
                                                height: bounds.width * 0.3)
                                         .clipped()
@@ -99,12 +100,12 @@ struct AddEmployerView: View {
                         
                         InputFieldView(title: "Имя", text: $viewModel.name)
                         
+                        InputFieldView(title: "Укажите должность сотрудника", text: $viewModel.position)
+                        
                         InputFieldView(title: "Укажите номер телефона", text: $viewModel.phone)
                         
                         InputFieldView(title: "Укажите зарплату сотрудника", text: $viewModel.salary)
                             .keyboardType(.numberPad)
-                        
-                        InputFieldView(title: "Укажите должность сотрудника", text: $viewModel.position)
                         
                         Button {
                             viewModel.saveEmployerData(state: viewState) {
