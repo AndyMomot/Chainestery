@@ -71,7 +71,7 @@ struct EmployerView: View {
 
 private extension EmployerView {
     private func getImage(for imageId: String) -> Image? {
-        let path = FileManagerService.Keys.profileImage(id: imageId).path
+        let path = FileManagerService.Keys.image(id: imageId).path
         guard let imageData = FileManagerService().getFile(forPath: path),
               let uiImage = UIImage(data: imageData)
         else { return nil }

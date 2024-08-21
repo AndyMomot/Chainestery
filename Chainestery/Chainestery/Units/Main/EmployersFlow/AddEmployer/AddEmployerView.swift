@@ -124,6 +124,21 @@ struct AddEmployerView: View {
                                 }
                                 .padding(.top)
                         }
+                        
+                        switch viewState {
+                        case .create:
+                            EmptyView()
+                        case .details:
+                            Button {
+                                withAnimation {
+                                    viewModel.showDeleteAlert.toggle()
+                                }
+                            } label: {
+                                Text("Удалить")
+                                    .foregroundStyle(Colors.redC.swiftUIColor)
+                                    .font(Fonts.KulimPark.bold.swiftUIFont(size: 16))
+                            }
+                        }
                     }
                     .padding()
                     .background(Colors.deepTeal.swiftUIColor)
@@ -133,6 +148,23 @@ struct AddEmployerView: View {
             }
             .scrollIndicators(.never)
             .padding(.horizontal, bounds.width * 0.08)
+            
+            if viewModel.showDeleteAlert {
+                Color.white.opacity(0.6)
+                    .ignoresSafeArea()
+                
+                CustomAlertView(title: "Вы хотите удалить ?") { flag in
+                    viewModel.showDeleteAlert.toggle()
+                    
+                    if flag {
+                        viewModel.deleteEmployer(state: self.viewState) {
+                            onSaved?()
+                            dismiss.callAsFunction()
+                        }
+                    }
+                }
+                .padding(.horizontal)
+            }
         }
         .onAppear {
             viewModel.setView(state: self.viewState)
@@ -144,5 +176,9 @@ struct AddEmployerView: View {
 }
 
 #Preview {
-    AddEmployerView(viewState: .create)
+    AddEmployerView(viewState: .details(model: .init(
+        name: "Bob",
+        phone: "+380674820482",
+        salary: 1000,
+        position: "Developer")))
 }

@@ -21,15 +21,18 @@ struct NavigationBackButtonView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40)
+                    .foregroundStyle(color)
+                    .font(Fonts.KulimPark.semiBold.swiftUIFont(size: 30))
             }
 
             Spacer()
             
             Text(title)
-            
+                .foregroundStyle(color)
+                .font(Fonts.KulimPark.bold.swiftUIFont(size: 30))
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
         }
-        .foregroundStyle(color)
-        .font(Fonts.KulimPark.bold.swiftUIFont(size: 30))
     }
 }
 

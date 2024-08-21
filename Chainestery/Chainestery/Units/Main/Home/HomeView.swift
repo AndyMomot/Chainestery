@@ -55,7 +55,7 @@ struct HomeView: View {
                             Spacer()
                             
                             HomeButtonView(imageName: Asset.createOrder.name) {
-                                
+                                viewModel.showOrders.toggle()
                             }
                             .frame(width: buttonWidth,
                                    height: buttonWidth)
@@ -78,6 +78,10 @@ struct HomeView: View {
             }
             .navigationDestination(isPresented: $viewModel.showEmployers) {
                 EmployersView()
+                    .navigationBarBackButtonHidden()
+            }
+            .navigationDestination(isPresented: $viewModel.showOrders) {
+                OrdersView()
                     .navigationBarBackButtonHidden()
             }
         }

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470E47F32C76571900CE59D9 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470E47F22C76571900CE59D9 /* OrdersView.swift */; };
+		470E47F52C76572900CE59D9 /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470E47F42C76572900CE59D9 /* OrdersViewModel.swift */; };
+		470E47F82C76595A00CE59D9 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470E47F72C76595A00CE59D9 /* CustomAlertView.swift */; };
+		470E47FD2C7663AC00CE59D9 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470E47FC2C7663AC00CE59D9 /* OrderModel.swift */; };
+		470E48012C76697C00CE59D9 /* AddOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470E48002C76697C00CE59D9 /* AddOrderView.swift */; };
+		470E48032C76698400CE59D9 /* AddOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470E48022C76698400CE59D9 /* AddOrderViewModel.swift */; };
+		470E48062C766EC100CE59D9 /* DynamicHeightTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470E48052C766EC100CE59D9 /* DynamicHeightTextField.swift */; };
 		474D62E82C6FAE2000EBF478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62E72C6FAE2000EBF478 /* AppDelegate.swift */; };
 		474D62EA2C6FAE2000EBF478 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62E92C6FAE2000EBF478 /* SceneDelegate.swift */; };
 		474D62EC2C6FAE2000EBF478 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62EB2C6FAE2000EBF478 /* RootViewController.swift */; };
@@ -65,6 +72,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		470E47F22C76571900CE59D9 /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
+		470E47F42C76572900CE59D9 /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
+		470E47F72C76595A00CE59D9 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		470E47FC2C7663AC00CE59D9 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		470E48002C76697C00CE59D9 /* AddOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderView.swift; sourceTree = "<group>"; };
+		470E48022C76698400CE59D9 /* AddOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewModel.swift; sourceTree = "<group>"; };
+		470E48052C766EC100CE59D9 /* DynamicHeightTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightTextField.swift; sourceTree = "<group>"; };
 		474D62E42C6FAE2000EBF478 /* Chainestery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chainestery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		474D62E72C6FAE2000EBF478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		474D62E92C6FAE2000EBF478 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +149,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		470E47F12C7656F800CE59D9 /* OrdersFlow */ = {
+			isa = PBXGroup;
+			children = (
+				470E47FE2C76695D00CE59D9 /* Orders */,
+				470E47FF2C76696A00CE59D9 /* AddOrder */,
+			);
+			path = OrdersFlow;
+			sourceTree = "<group>";
+		};
+		470E47F62C76594800CE59D9 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				470E47F72C76595A00CE59D9 /* CustomAlertView.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		470E47F92C76639300CE59D9 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				470E47FC2C7663AC00CE59D9 /* OrderModel.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		470E47FE2C76695D00CE59D9 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				470E47F22C76571900CE59D9 /* OrdersView.swift */,
+				470E47F42C76572900CE59D9 /* OrdersViewModel.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		470E47FF2C76696A00CE59D9 /* AddOrder */ = {
+			isa = PBXGroup;
+			children = (
+				470E48002C76697C00CE59D9 /* AddOrderView.swift */,
+				470E48022C76698400CE59D9 /* AddOrderViewModel.swift */,
+			);
+			path = AddOrder;
+			sourceTree = "<group>";
+		};
+		470E48042C766EB700CE59D9 /* DynamicHeightTextField */ = {
+			isa = PBXGroup;
+			children = (
+				470E48052C766EC100CE59D9 /* DynamicHeightTextField.swift */,
+			);
+			path = DynamicHeightTextField;
+			sourceTree = "<group>";
+		};
 		474D62DB2C6FAE2000EBF478 = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +411,7 @@
 			children = (
 				476894442C70A2F6007FDE48 /* Home */,
 				476894562C71FFED007FDE48 /* EmployersFlow */,
+				470E47F12C7656F800CE59D9 /* OrdersFlow */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -399,6 +465,7 @@
 		4768945C2C720072007FDE48 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				470E47F92C76639300CE59D9 /* Order */,
 				4768945D2C720078007FDE48 /* Employer */,
 			);
 			path = Models;
@@ -432,6 +499,8 @@
 		476894722C720E6C007FDE48 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				470E48042C766EB700CE59D9 /* DynamicHeightTextField */,
+				470E47F62C76594800CE59D9 /* Alert */,
 				4768947E2C720F1F007FDE48 /* WebView */,
 				476894742C720E6C007FDE48 /* CustomProgressView */,
 				476894762C720E6C007FDE48 /* NavigationBackButton */,
@@ -594,9 +663,12 @@
 				474D62EC2C6FAE2000EBF478 /* RootViewController.swift in Sources */,
 				4768945F2C720088007FDE48 /* EmployerModel.swift in Sources */,
 				474D63902C6FB0D100EBF478 /* Double+Additions.swift in Sources */,
+				470E48062C766EC100CE59D9 /* DynamicHeightTextField.swift in Sources */,
 				476894802C720F4F007FDE48 /* WebView.swift in Sources */,
 				4768944B2C70AD30007FDE48 /* HomeButtonView.swift in Sources */,
+				470E47F32C76571900CE59D9 /* OrdersView.swift in Sources */,
 				476894842C7216AF007FDE48 /* ImagePicker.swift in Sources */,
+				470E47FD2C7663AC00CE59D9 /* OrderModel.swift in Sources */,
 				476894552C70B7AD007FDE48 /* UINavigationController+Additions.swift in Sources */,
 				474D63912C6FB0D100EBF478 /* Date+Additions.swift in Sources */,
 				474D637D2C6FB0D100EBF478 /* FileManagerService.swift in Sources */,
@@ -606,6 +678,7 @@
 				474D63A02C6FB20900EBF478 /* PreloaderViewModel.swift in Sources */,
 				474D62E82C6FAE2000EBF478 /* AppDelegate.swift in Sources */,
 				4768947B2C720EC8007FDE48 /* CustomProgressView.swift in Sources */,
+				470E47F52C76572900CE59D9 /* OrdersViewModel.swift in Sources */,
 				474D637F2C6FB0D100EBF478 /* Images.generated.swift in Sources */,
 				474D63862C6FB0D100EBF478 /* Fonts.generated.swift in Sources */,
 				474D63812C6FB0D100EBF478 /* Colors.generated.swift in Sources */,
@@ -616,15 +689,18 @@
 				474D63932C6FB0D100EBF478 /* String+Additions.swift in Sources */,
 				476894502C70B4F1007FDE48 /* EmployersViewModel.swift in Sources */,
 				474D62EA2C6FAE2000EBF478 /* SceneDelegate.swift in Sources */,
+				470E47F82C76595A00CE59D9 /* CustomAlertView.swift in Sources */,
 				476894822C720F5B007FDE48 /* InputFieldView.swift in Sources */,
 				476894592C720010007FDE48 /* AddEmployerView.swift in Sources */,
 				476894402C7097AA007FDE48 /* PrivacyPolicyView.swift in Sources */,
+				470E48032C76698400CE59D9 /* AddOrderViewModel.swift in Sources */,
 				474D63052C6FB02000EBF478 /* RootContentView.swift in Sources */,
 				476894482C70A30B007FDE48 /* HomeViewModel.swift in Sources */,
 				474D63AC2C6FB88F00EBF478 /* OnboardingSmallView.swift in Sources */,
 				474D637C2C6FB0D100EBF478 /* DefaultsService.swift in Sources */,
 				4768944E2C70B4E7007FDE48 /* EmployersView.swift in Sources */,
 				474D63AF2C6FB88F00EBF478 /* OnboardingViewTabView.swift in Sources */,
+				470E48012C76697C00CE59D9 /* AddOrderView.swift in Sources */,
 				474D63AD2C6FB88F00EBF478 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

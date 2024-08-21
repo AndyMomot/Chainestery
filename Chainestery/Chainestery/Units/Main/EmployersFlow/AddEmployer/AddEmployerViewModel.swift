@@ -16,6 +16,7 @@ extension AddEmployerView {
         @Published var phone: String = ""
         @Published var salary: String = ""
         @Published var position: String = ""
+        @Published var showDeleteAlert = false
         
         var isImageSelected: Bool {
             selectedImage != UIImage(systemName: "photo.fill")
@@ -64,7 +65,7 @@ extension AddEmployerView {
                     
                     DefaultsService.addEmployer(model: model)
                     // Employer image saving
-                    if let imageData = selectedImage.jpegData(compressionQuality: 1) {
+                    if let imageData = self.selectedImage.jpegData(compressionQuality: 1) {
                         self.saveImage(data: imageData, to: model.id)
                     }
                     
@@ -76,7 +77,7 @@ extension AddEmployerView {
                     
                     DefaultsService.editEmployer(model: model)
                     // Employer image saving
-                    if let imageData = selectedImage.jpegData(compressionQuality: 1) {
+                    if let imageData = self.selectedImage.jpegData(compressionQuality: 1) {
                         self.saveImage(data: imageData, to: model.id)
                     }
                 }
@@ -86,14 +87,26 @@ extension AddEmployerView {
         }
         
         private func getImage(for imageId: String) -> UIImage? {
-            let path = FileManagerService.Keys.profileImage(id: imageId).path
+            let path = FileManagerService.Keys.image(id: imageId).path
             guard let imageData = FileManagerService().getFile(forPath: path) else { return nil }
             return UIImage(data: imageData)
         }
         
         private func saveImage(data: Data, to pathID: String) {
-            let path = FileManagerService.Keys.profileImage(id: pathID).path
+            let path = FileManagerService.Keys.image(id: pathID).path
             FileManagerService().saveFile(data: data, forPath: path)
+        }
+        
+        func deleteEmployer(state: ViewState, completion: @escaping () -> Void) {
+            switch state {
+            case .create:
+                break
+            case .details(let model):
+                DispatchQueue.main.async {
+                    DefaultsService.removeEmployer(model: model)
+                    completion()
+                }
+            }
         }
     }
 }
