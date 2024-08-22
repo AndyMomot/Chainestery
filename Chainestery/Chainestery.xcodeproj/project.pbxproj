@@ -69,6 +69,7 @@
 		476894822C720F5B007FDE48 /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476894812C720F5B007FDE48 /* InputFieldView.swift */; };
 		476894842C7216AF007FDE48 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476894832C7216AF007FDE48 /* ImagePicker.swift */; };
 		47689B2A2C73A7A9007FDE48 /* EmployerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47689B292C73A7A9007FDE48 /* EmployerView.swift */; };
+		47B143BF2C77AFF500ABE125 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B143BE2C77AFF500ABE125 /* OrderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +137,7 @@
 		476894812C720F5B007FDE48 /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
 		476894832C7216AF007FDE48 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		47689B292C73A7A9007FDE48 /* EmployerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerView.swift; sourceTree = "<group>"; };
+		47B143BE2C77AFF500ABE125 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 		470E47FE2C76695D00CE59D9 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
+				47B143BD2C77AFBD00ABE125 /* Views */,
 				470E47F22C76571900CE59D9 /* OrdersView.swift */,
 				470E47F42C76572900CE59D9 /* OrdersViewModel.swift */,
 			);
@@ -549,6 +552,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		47B143BD2C77AFBD00ABE125 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47B143BE2C77AFF500ABE125 /* OrderCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -669,6 +680,7 @@
 				470E47F32C76571900CE59D9 /* OrdersView.swift in Sources */,
 				476894842C7216AF007FDE48 /* ImagePicker.swift in Sources */,
 				470E47FD2C7663AC00CE59D9 /* OrderModel.swift in Sources */,
+				47B143BF2C77AFF500ABE125 /* OrderCell.swift in Sources */,
 				476894552C70B7AD007FDE48 /* UINavigationController+Additions.swift in Sources */,
 				474D63912C6FB0D100EBF478 /* Date+Additions.swift in Sources */,
 				474D637D2C6FB0D100EBF478 /* FileManagerService.swift in Sources */,

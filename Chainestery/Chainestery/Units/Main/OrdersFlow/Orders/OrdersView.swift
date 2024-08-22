@@ -56,7 +56,12 @@ struct OrdersView: View {
                 ScrollView {
                     VStack(spacing: 17) {
                         ForEach(viewModel.orders) { order in
-                            Text(order.name)
+                            Button {
+                                viewModel.orderToShow = order
+                                viewModel.showOrderDetails.toggle()
+                            } label: {
+                                OrderCell(item: order)
+                            }
                         }
                         
                         Button {
@@ -90,6 +95,11 @@ struct OrdersView: View {
                 viewModel.getOrders()
             }
                 .navigationBarBackButtonHidden()
+        }
+        .navigationDestination(isPresented: $viewModel.showOrderDetails) {
+            if let order = viewModel.orderToShow {
+                Text(order.name)
+            }
         }
     }
 }

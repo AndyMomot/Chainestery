@@ -16,6 +16,9 @@ extension OrdersView {
         @Published var showCompletedOrders = false
         @Published var showAddOrder = false
         
+        @Published var orderToShow: OrderModel?
+        @Published var showOrderDetails = false
+        
         func getOrders() {
             DispatchQueue.main.async { [weak self] in
                 guard let self else { return }

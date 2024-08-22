@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OrderModel: Identifiable, Codable {
+struct OrderModel: Identifiable, Codable, Hashable {
     private(set) var id = UUID().uuidString
     private(set) var dateCreated = Date()
     
