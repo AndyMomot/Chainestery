@@ -14,6 +14,30 @@ struct OrderModel: Identifiable, Codable, Hashable {
     var name: String
     var budget: Double
     var info: String
+    var employer: EmployerModel?
     var workStartedDate: Date?
-    var isFinish: Bool = false
+    var status: Status = .new
+    
+    var progress: CGFloat {
+        guard let startDate = workStartedDate else {
+            return .zero
+        }
+        let finishDate = startDate.addOrSubtract(component: .hour, value: 1)
+        guard let minutes = Date().differenceBetweenDates(component: .minute,
+                                                          from: Date(),
+                                                          to: finishDate)
+        else {
+            return .zero
+        }
+        
+        return CGFloat(60 - minutes) / 60
+    }
+}
+
+extension OrderModel {
+    enum Status: Codable {
+        case new
+        case inProgress
+        case finished
+    }
 }

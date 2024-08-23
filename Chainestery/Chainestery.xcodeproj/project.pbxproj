@@ -14,6 +14,8 @@
 		470E48012C76697C00CE59D9 /* AddOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470E48002C76697C00CE59D9 /* AddOrderView.swift */; };
 		470E48032C76698400CE59D9 /* AddOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470E48022C76698400CE59D9 /* AddOrderViewModel.swift */; };
 		470E48062C766EC100CE59D9 /* DynamicHeightTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470E48052C766EC100CE59D9 /* DynamicHeightTextField.swift */; };
+		47199CD92C78F5E800A3663C /* RepairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CD82C78F5E800A3663C /* RepairView.swift */; };
+		47199CDB2C78F5F100A3663C /* RepairViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CDA2C78F5F100A3663C /* RepairViewModel.swift */; };
 		474D62E82C6FAE2000EBF478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62E72C6FAE2000EBF478 /* AppDelegate.swift */; };
 		474D62EA2C6FAE2000EBF478 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62E92C6FAE2000EBF478 /* SceneDelegate.swift */; };
 		474D62EC2C6FAE2000EBF478 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62EB2C6FAE2000EBF478 /* RootViewController.swift */; };
@@ -80,6 +82,8 @@
 		470E48002C76697C00CE59D9 /* AddOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderView.swift; sourceTree = "<group>"; };
 		470E48022C76698400CE59D9 /* AddOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewModel.swift; sourceTree = "<group>"; };
 		470E48052C766EC100CE59D9 /* DynamicHeightTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightTextField.swift; sourceTree = "<group>"; };
+		47199CD82C78F5E800A3663C /* RepairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairView.swift; sourceTree = "<group>"; };
+		47199CDA2C78F5F100A3663C /* RepairViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairViewModel.swift; sourceTree = "<group>"; };
 		474D62E42C6FAE2000EBF478 /* Chainestery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chainestery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		474D62E72C6FAE2000EBF478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		474D62E92C6FAE2000EBF478 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			children = (
 				470E47FE2C76695D00CE59D9 /* Orders */,
 				470E47FF2C76696A00CE59D9 /* AddOrder */,
+				47199CD72C78F5D200A3663C /* Repair */,
 			);
 			path = OrdersFlow;
 			sourceTree = "<group>";
@@ -201,6 +206,15 @@
 				470E48052C766EC100CE59D9 /* DynamicHeightTextField.swift */,
 			);
 			path = DynamicHeightTextField;
+			sourceTree = "<group>";
+		};
+		47199CD72C78F5D200A3663C /* Repair */ = {
+			isa = PBXGroup;
+			children = (
+				47199CD82C78F5E800A3663C /* RepairView.swift */,
+				47199CDA2C78F5F100A3663C /* RepairViewModel.swift */,
+			);
+			path = Repair;
 			sourceTree = "<group>";
 		};
 		474D62DB2C6FAE2000EBF478 = {
@@ -680,6 +694,7 @@
 				470E47F32C76571900CE59D9 /* OrdersView.swift in Sources */,
 				476894842C7216AF007FDE48 /* ImagePicker.swift in Sources */,
 				470E47FD2C7663AC00CE59D9 /* OrderModel.swift in Sources */,
+				47199CD92C78F5E800A3663C /* RepairView.swift in Sources */,
 				47B143BF2C77AFF500ABE125 /* OrderCell.swift in Sources */,
 				476894552C70B7AD007FDE48 /* UINavigationController+Additions.swift in Sources */,
 				474D63912C6FB0D100EBF478 /* Date+Additions.swift in Sources */,
@@ -714,6 +729,7 @@
 				474D63AF2C6FB88F00EBF478 /* OnboardingViewTabView.swift in Sources */,
 				470E48012C76697C00CE59D9 /* AddOrderView.swift in Sources */,
 				474D63AD2C6FB88F00EBF478 /* OnboardingView.swift in Sources */,
+				47199CDB2C78F5F100A3663C /* RepairViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

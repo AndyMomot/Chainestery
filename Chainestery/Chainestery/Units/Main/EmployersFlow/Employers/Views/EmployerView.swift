@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EmployerView: View {
     var item: EmployerModel
+    var showSalary: Bool
     
     @State private var image: Image?
     
@@ -22,7 +23,8 @@ struct EmployerView: View {
                 image
                     .resizable()
                     .scaledToFill()
-                    .frame(width: bounds.width * 0.3, height: bounds.width * 0.3)
+                    .frame(width: bounds.width * 0.3, 
+                           height: bounds.width * 0.3)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .clipped()
                     .padding(.top)
@@ -44,16 +46,19 @@ struct EmployerView: View {
             
             HStack {
                 Spacer()
-                Text(item.salary.string() + "$")
-                    .foregroundStyle(Colors.emeraldSurge.swiftUIColor)
-                    .font(Fonts.KulimPark.bold.swiftUIFont(size: 19))
-                    .multilineTextAlignment(.center)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.8)
+                if showSalary {
+                    Text(item.salary.string() + "$")
+                        .foregroundStyle(Colors.emeraldSurge.swiftUIColor)
+                        .font(Fonts.KulimPark.bold.swiftUIFont(size: 19))
+                        .multilineTextAlignment(.center)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
+                }
                 Spacer()
             }
-            .padding(.bottom)
+            .padding(.bottom, 10)
             .padding(.horizontal)
+           
         }
         .background {
             RoundedRectangle(cornerRadius: 14)
@@ -87,7 +92,8 @@ private extension EmployerView {
             name: "Stive",
             phone: "+380830210518",
             salary: 1000,
-            position: "iOS Dev"))
+            position: "iOS Dev"), 
+                     showSalary: true)
         .frame(width: 155, height: 184)
     }
 }

@@ -22,8 +22,9 @@ extension OrdersView {
         func getOrders() {
             DispatchQueue.main.async { [weak self] in
                 guard let self else { return }
-                self.orders = DefaultsService.orders
-                self.isHaveCompletedOrders = self.orders.contains(where: { $0.isFinish })
+                let allOrders = DefaultsService.orders
+                self.orders = allOrders.filter { $0.status != .finished }
+                self.isHaveCompletedOrders = allOrders.contains(where: { $0.status == .finished })
             }
         }
     }

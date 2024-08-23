@@ -14,7 +14,7 @@ struct EmployersView: View {
         UIScreen.main.bounds
     }
     
-    let columns = [
+    private let columns = [
         GridItem(.flexible(), spacing: 40),
         GridItem(.flexible(), spacing: 40)
     ]
@@ -41,7 +41,8 @@ struct EmployersView: View {
                                 viewModel.employerToShow = employer
                                 viewModel.showEmployer.toggle()
                             } label: {
-                                EmployerView(item: employer)
+                                EmployerView(item: employer,
+                                             showSalary: true)
                             }
                         }
                         

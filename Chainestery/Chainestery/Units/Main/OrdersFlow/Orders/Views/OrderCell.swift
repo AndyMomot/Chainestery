@@ -32,20 +32,20 @@ struct OrderCell: View {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
                     Text(item.name)
-                        .foregroundStyle(item.isFinish ? .white : .black)
+                        .foregroundStyle(item.status == .finished ? .white : .black)
                         .font(Fonts.KulimPark.bold.swiftUIFont(size: 18))
                     
                     Spacer()
                     
-                    if !item.isFinish {
-                        Text(item.budget.string())
+                    if item.status != .finished {
+                        Text(item.budget.string() + "$")
                             .foregroundStyle(Colors.emeraldSurge.swiftUIColor)
                             .font(Fonts.KulimPark.bold.swiftUIFont(size: 19))
                     }
                 }
                 
                 Text("Описание: ")
-                    .foregroundColor(item.isFinish ? .white : .black)
+                    .foregroundColor(item.status == .finished ? .white : .black)
                     .font(Fonts.KulimPark.semiBold.swiftUIFont(size: 10))
                 +
                 Text(item.info)
@@ -54,7 +54,7 @@ struct OrderCell: View {
             }
         }
         .padding(10)
-        .background(item.isFinish ? Colors.emeraldSurge.swiftUIColor : .white)
+        .background(item.status == .finished ? Colors.emeraldSurge.swiftUIColor : .white)
         .cornerRadius(14, corners: .allCorners)
         .onAppear {
             DispatchQueue.main.async {
@@ -82,7 +82,7 @@ private extension OrderCell {
         OrderCell(item: .init(name: "Ремонт телефона",
                               budget: 200,
                               info: "Профессиональная замена крышки телефона: быстро, качественно и с гарантией. Вернем вашему устройству идеальный внешний вид!", 
-                              isFinish: false))
+                              status: .new))
         .frame(width: 380, height: 125)
     }
 }

@@ -21,7 +21,7 @@ struct OrdersView: View {
                 .ignoresSafeArea()
                 .opacity(0.2)
             
-            Asset.employersBg.swiftUIImage
+            Asset.repairBg.swiftUIImage
                 .resizable()
                 .ignoresSafeArea()
                 .opacity(0.2)
@@ -98,7 +98,8 @@ struct OrdersView: View {
         }
         .navigationDestination(isPresented: $viewModel.showOrderDetails) {
             if let order = viewModel.orderToShow {
-                Text(order.name)
+                RepairView(item: order)
+                    .navigationBarBackButtonHidden()
             }
         }
     }

@@ -22,7 +22,7 @@ struct AddOrderView: View {
             Colors.deepTeal.swiftUIColor
                 .ignoresSafeArea()
             
-            Asset.employersBg.swiftUIImage
+            Asset.repairBg.swiftUIImage
                 .resizable()
                 .ignoresSafeArea()
                 .opacity(0.2)
