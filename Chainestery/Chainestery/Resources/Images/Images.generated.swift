@@ -38,6 +38,7 @@ internal enum Asset {
   internal static let privacyIcon = ImageAsset(name: "privacyIcon")
   internal static let repairBg1 = ImageAsset(name: "repairBg 1")
   internal static let repairBg = ImageAsset(name: "repairBg")
+  internal static let statisticBars = ImageAsset(name: "statisticBars")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
