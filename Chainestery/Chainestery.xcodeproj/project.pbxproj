@@ -25,6 +25,7 @@
 		47199CED2C7A0F7600A3663C /* IncomeLossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CEC2C7A0F7600A3663C /* IncomeLossView.swift */; };
 		47199CEF2C7A0F7C00A3663C /* IncomeLossViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CEE2C7A0F7C00A3663C /* IncomeLossViewModel.swift */; };
 		47199CF32C7A115A00A3663C /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CF22C7A115A00A3663C /* ChartView.swift */; };
+		47199CF62C7A269300A3663C /* IncomeLossTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CF52C7A269300A3663C /* IncomeLossTextField.swift */; };
 		474D62E82C6FAE2000EBF478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62E72C6FAE2000EBF478 /* AppDelegate.swift */; };
 		474D62EA2C6FAE2000EBF478 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62E92C6FAE2000EBF478 /* SceneDelegate.swift */; };
 		474D62EC2C6FAE2000EBF478 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62EB2C6FAE2000EBF478 /* RootViewController.swift */; };
@@ -102,6 +103,7 @@
 		47199CEC2C7A0F7600A3663C /* IncomeLossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeLossView.swift; sourceTree = "<group>"; };
 		47199CEE2C7A0F7C00A3663C /* IncomeLossViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeLossViewModel.swift; sourceTree = "<group>"; };
 		47199CF22C7A115A00A3663C /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		47199CF52C7A269300A3663C /* IncomeLossTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeLossTextField.swift; sourceTree = "<group>"; };
 		474D62E42C6FAE2000EBF478 /* Chainestery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chainestery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		474D62E72C6FAE2000EBF478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		474D62E92C6FAE2000EBF478 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				47199CF12C7A114D00A3663C /* ChartView */,
+				47199CF42C7A268200A3663C /* IncomeLossTextField */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,6 +292,14 @@
 				47199CF22C7A115A00A3663C /* ChartView.swift */,
 			);
 			path = ChartView;
+			sourceTree = "<group>";
+		};
+		47199CF42C7A268200A3663C /* IncomeLossTextField */ = {
+			isa = PBXGroup;
+			children = (
+				47199CF52C7A269300A3663C /* IncomeLossTextField.swift */,
+			);
+			path = IncomeLossTextField;
 			sourceTree = "<group>";
 		};
 		474D62DB2C6FAE2000EBF478 = {
@@ -796,6 +807,7 @@
 				4768947D2C720EE7007FDE48 /* NavigationBackButtonView.swift in Sources */,
 				47199CE82C79E1CD00A3663C /* AddOrderNoteView.swift in Sources */,
 				474D63932C6FB0D100EBF478 /* String+Additions.swift in Sources */,
+				47199CF62C7A269300A3663C /* IncomeLossTextField.swift in Sources */,
 				476894502C70B4F1007FDE48 /* EmployersViewModel.swift in Sources */,
 				474D62EA2C6FAE2000EBF478 /* SceneDelegate.swift in Sources */,
 				470E47F82C76595A00CE59D9 /* CustomAlertView.swift in Sources */,

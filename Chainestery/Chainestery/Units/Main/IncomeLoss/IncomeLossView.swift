@@ -37,6 +37,43 @@ struct IncomeLossView: View {
                             
                         }
                         .padding(.horizontal)
+                        
+                        VStack(spacing: 10) {
+                            HStack {
+                                Spacer()
+                                
+                                HStack(spacing: 40) {
+                                    HStack(spacing: 8) {
+                                        RoundedRectangle(cornerRadius: 5)
+                                            .scaledToFit()
+                                            .foregroundStyle(Colors.emeraldSurge.swiftUIColor)
+                                            .frame(width: 13)
+                                        
+                                        Text("Доход")
+                                            .foregroundStyle(.black)
+                                            .font(Fonts.KulimPark.light.swiftUIFont(size: 10))
+                                    }
+                                    
+                                    HStack(spacing: 8) {
+                                        RoundedRectangle(cornerRadius: 5)
+                                            .scaledToFit()
+                                            .foregroundStyle(Colors.redC.swiftUIColor)
+                                            .frame(width: 13)
+                                        
+                                        Text("Убыток")
+                                            .foregroundStyle(.black)
+                                            .font(Fonts.KulimPark.light.swiftUIFont(size: 10))
+                                    }
+                                }
+                            }
+                            .padding(.horizontal)
+                            
+                            IncomeLossTextField(
+                                title: "ПН",
+                                income: $viewModel.mondayIncome,
+                                loss: $viewModel.mondayLoss)
+                        }
+                        .padding(.horizontal)
                     }
                 }
                 .scrollIndicators(.never)

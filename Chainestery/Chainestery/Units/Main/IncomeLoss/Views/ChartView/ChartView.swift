@@ -24,14 +24,14 @@ struct ChartView: View {
                 } else {
                     
                     Chart {
-                        ForEach(data) { item in
-                            BarMark(x: .value("Day", item.day),
+                        ForEach(data, id: \.day.id) { item in
+                            BarMark(x: .value("Day", item.day.rawValue),
                                     y: .value("Income", item.income),
                                     width: .fixed(24))
                             .foregroundStyle(Colors.emeraldSurge.swiftUIColor)
                             .cornerRadius(8)
                             
-                            BarMark(x: .value("Day", item.day),
+                            BarMark(x: .value("Day", item.day.rawValue),
                                     y: .value("Loss", item.loss),
                                     width: .fixed(24))
                             .foregroundStyle(Colors.redC.swiftUIColor)
