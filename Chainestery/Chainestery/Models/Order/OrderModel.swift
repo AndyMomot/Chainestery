@@ -8,8 +8,10 @@
 import Foundation
 
 struct OrderModel: Identifiable, Codable, Hashable {
-    private(set) var id = UUID().uuidString
     private(set) var dateCreated = Date()
+    private(set) var minutesForFixing = CGFloat.random(in: 15...60)
+    
+    var id = UUID().uuidString // don't set new value
     
     var name: String
     var budget: Double
@@ -22,15 +24,16 @@ struct OrderModel: Identifiable, Codable, Hashable {
         guard let startDate = workStartedDate else {
             return .zero
         }
-        let finishDate = startDate.addOrSubtract(component: .hour, value: 1)
-        guard let minutes = Date().differenceBetweenDates(component: .minute,
+        let finishDate = startDate.addOrSubtract(component: .minute,
+                                                 value: Int(minutesForFixing))
+        guard let secondsLeft = Date().differenceBetweenDates(component: .second,
                                                           from: Date(),
                                                           to: finishDate)
         else {
             return .zero
         }
-        
-        return CGFloat(60 - minutes) / 60
+        let secondsForFixing: CGFloat = minutesForFixing * 60
+        return (secondsForFixing - CGFloat(secondsLeft)) / secondsForFixing
     }
 }
 

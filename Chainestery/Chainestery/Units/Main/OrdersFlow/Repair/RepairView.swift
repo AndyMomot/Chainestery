@@ -135,7 +135,8 @@ struct RepairView: View {
                     .scrollIndicators(.never)
                     
                 case .inProgress, .finished:
-                    let isFinished = viewModel.progress >= 1
+                    let isCompleted = viewModel.progress >= 1
+                    let isFinished = viewModel.order.status == .finished
                     
                     ScrollView {
                         VStack(alignment: .center, spacing: 20) {
@@ -163,12 +164,12 @@ struct RepairView: View {
                             HStack {
                                 Spacer()
                                 Button {
-                                    if !isFinished {
+                                    if isCompleted {
                                         viewModel.finishOrder {
                                             onSaved?()
-                                            dismiss.callAsFunction()
                                         }
                                     }
+                                    dismiss.callAsFunction()
                                 } label: {
                                     Text(isFinished ? "Готово" : "Завершить")
                                         .foregroundStyle(Colors.ceruleanBlue.swiftUIColor)
@@ -178,8 +179,8 @@ struct RepairView: View {
                                         .background(.white)
                                         .cornerRadius(30, corners: .allCorners)
                                 }
-                                .opacity(isFinished ? 1 : 0.6)
-                                .disabled(!isFinished)
+                                .opacity(isCompleted ? 1 : 0.6)
+                                .disabled(!isCompleted)
                                 
                                 Spacer()
                             }

@@ -10,7 +10,6 @@ import Foundation
 extension OrdersView {
     final class OrdersViewModel: ObservableObject {
         @Published var isHaveCompletedOrders = false
-        @Published var completedOrders: [OrderModel] = []
         @Published var orders: [OrderModel] = []
         
         @Published var showCompletedOrders = false

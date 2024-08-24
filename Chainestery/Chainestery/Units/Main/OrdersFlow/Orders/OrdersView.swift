@@ -98,9 +98,21 @@ struct OrdersView: View {
         }
         .navigationDestination(isPresented: $viewModel.showOrderDetails) {
             if let order = viewModel.orderToShow {
-                RepairView(item: order)
+                RepairView(item: order) {
+                    withAnimation {
+                        viewModel.getOrders()
+                    }
+                }
                     .navigationBarBackButtonHidden()
             }
+        }
+        .navigationDestination(isPresented: $viewModel.showCompletedOrders) {
+            FinishedOrdersView {
+                withAnimation {
+                    viewModel.getOrders()
+                }
+            }
+                .navigationBarBackButtonHidden()
         }
     }
 }

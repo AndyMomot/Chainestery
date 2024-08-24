@@ -34,7 +34,7 @@ struct OrderCell: View {
                     Text(item.name)
                         .foregroundStyle(item.status == .finished ? .white : .black)
                         .font(Fonts.KulimPark.bold.swiftUIFont(size: 18))
-                    
+                        .multilineTextAlignment(.leading)
                     Spacer()
                     
                     if item.status != .finished {
@@ -71,7 +71,9 @@ private extension OrderCell {
         let path = FileManagerService.Keys.image(id: imageId).path
         guard let imageData = FileManagerService().getFile(forPath: path),
               let uiImage = UIImage(data: imageData)
-        else { return }
+        else {
+            return
+        }
         self.image = Image(uiImage: uiImage)
     }
 }

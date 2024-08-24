@@ -25,8 +25,6 @@ extension RepairView {
             } else {
                 self.progress = order.progress
             }
-            
-            progress = 1
         }
         
         func getEmployers() {
@@ -52,6 +50,7 @@ extension RepairView {
                 guard let self else { return }
                 self.order.status = .finished
                 DefaultsService.editOrder(model: self.order)
+                completion()
             }
         }
         
