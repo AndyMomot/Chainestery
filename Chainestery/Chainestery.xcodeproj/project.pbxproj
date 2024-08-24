@@ -18,6 +18,10 @@
 		47199CDB2C78F5F100A3663C /* RepairViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CDA2C78F5F100A3663C /* RepairViewModel.swift */; };
 		47199CDE2C79CF2400A3663C /* FinishedOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CDD2C79CF2400A3663C /* FinishedOrdersView.swift */; };
 		47199CE02C79CF2C00A3663C /* FinishedOrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CDF2C79CF2C00A3663C /* FinishedOrdersViewModel.swift */; };
+		47199CE32C79DBE900A3663C /* OrderNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CE22C79DBE900A3663C /* OrderNotesView.swift */; };
+		47199CE52C79DBF100A3663C /* OrderNotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CE42C79DBF100A3663C /* OrderNotesViewModel.swift */; };
+		47199CE82C79E1CD00A3663C /* AddOrderNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CE72C79E1CD00A3663C /* AddOrderNoteView.swift */; };
+		47199CEA2C79E1D500A3663C /* AddOrderNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CE92C79E1D500A3663C /* AddOrderNoteViewModel.swift */; };
 		474D62E82C6FAE2000EBF478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62E72C6FAE2000EBF478 /* AppDelegate.swift */; };
 		474D62EA2C6FAE2000EBF478 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62E92C6FAE2000EBF478 /* SceneDelegate.swift */; };
 		474D62EC2C6FAE2000EBF478 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62EB2C6FAE2000EBF478 /* RootViewController.swift */; };
@@ -88,6 +92,10 @@
 		47199CDA2C78F5F100A3663C /* RepairViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairViewModel.swift; sourceTree = "<group>"; };
 		47199CDD2C79CF2400A3663C /* FinishedOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedOrdersView.swift; sourceTree = "<group>"; };
 		47199CDF2C79CF2C00A3663C /* FinishedOrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedOrdersViewModel.swift; sourceTree = "<group>"; };
+		47199CE22C79DBE900A3663C /* OrderNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderNotesView.swift; sourceTree = "<group>"; };
+		47199CE42C79DBF100A3663C /* OrderNotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderNotesViewModel.swift; sourceTree = "<group>"; };
+		47199CE72C79E1CD00A3663C /* AddOrderNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderNoteView.swift; sourceTree = "<group>"; };
+		47199CE92C79E1D500A3663C /* AddOrderNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderNoteViewModel.swift; sourceTree = "<group>"; };
 		474D62E42C6FAE2000EBF478 /* Chainestery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chainestery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		474D62E72C6FAE2000EBF478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		474D62E92C6FAE2000EBF478 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +174,8 @@
 				470E47FF2C76696A00CE59D9 /* AddOrder */,
 				47199CD72C78F5D200A3663C /* Repair */,
 				47199CDC2C79CF1600A3663C /* FinishedOrders */,
+				47199CE12C79DBA200A3663C /* OrderNotes */,
+				47199CE62C79E1BC00A3663C /* AddOrderNote */,
 			);
 			path = OrdersFlow;
 			sourceTree = "<group>";
@@ -229,6 +239,24 @@
 				47199CDF2C79CF2C00A3663C /* FinishedOrdersViewModel.swift */,
 			);
 			path = FinishedOrders;
+			sourceTree = "<group>";
+		};
+		47199CE12C79DBA200A3663C /* OrderNotes */ = {
+			isa = PBXGroup;
+			children = (
+				47199CE22C79DBE900A3663C /* OrderNotesView.swift */,
+				47199CE42C79DBF100A3663C /* OrderNotesViewModel.swift */,
+			);
+			path = OrderNotes;
+			sourceTree = "<group>";
+		};
+		47199CE62C79E1BC00A3663C /* AddOrderNote */ = {
+			isa = PBXGroup;
+			children = (
+				47199CE72C79E1CD00A3663C /* AddOrderNoteView.swift */,
+				47199CE92C79E1D500A3663C /* AddOrderNoteViewModel.swift */,
+			);
+			path = AddOrderNote;
 			sourceTree = "<group>";
 		};
 		474D62DB2C6FAE2000EBF478 = {
@@ -703,6 +731,7 @@
 				4768945F2C720088007FDE48 /* EmployerModel.swift in Sources */,
 				474D63902C6FB0D100EBF478 /* Double+Additions.swift in Sources */,
 				470E48062C766EC100CE59D9 /* DynamicHeightTextField.swift in Sources */,
+				47199CE32C79DBE900A3663C /* OrderNotesView.swift in Sources */,
 				476894802C720F4F007FDE48 /* WebView.swift in Sources */,
 				4768944B2C70AD30007FDE48 /* HomeButtonView.swift in Sources */,
 				470E47F32C76571900CE59D9 /* OrdersView.swift in Sources */,
@@ -712,9 +741,11 @@
 				47B143BF2C77AFF500ABE125 /* OrderCell.swift in Sources */,
 				476894552C70B7AD007FDE48 /* UINavigationController+Additions.swift in Sources */,
 				474D63912C6FB0D100EBF478 /* Date+Additions.swift in Sources */,
+				47199CE52C79DBF100A3663C /* OrderNotesViewModel.swift in Sources */,
 				474D637D2C6FB0D100EBF478 /* FileManagerService.swift in Sources */,
 				47199CE02C79CF2C00A3663C /* FinishedOrdersViewModel.swift in Sources */,
 				474D638E2C6FB0D100EBF478 /* Strings.generated.swift in Sources */,
+				47199CEA2C79E1D500A3663C /* AddOrderNoteViewModel.swift in Sources */,
 				47689B2A2C73A7A9007FDE48 /* EmployerView.swift in Sources */,
 				474D63922C6FB0D100EBF478 /* View+Additions.swift in Sources */,
 				474D63A02C6FB20900EBF478 /* PreloaderViewModel.swift in Sources */,
@@ -728,6 +759,7 @@
 				4768945B2C72001C007FDE48 /* AddEmployerViewModel.swift in Sources */,
 				476894422C7097BA007FDE48 /* PrivacyPolicyViewModel.swift in Sources */,
 				4768947D2C720EE7007FDE48 /* NavigationBackButtonView.swift in Sources */,
+				47199CE82C79E1CD00A3663C /* AddOrderNoteView.swift in Sources */,
 				474D63932C6FB0D100EBF478 /* String+Additions.swift in Sources */,
 				476894502C70B4F1007FDE48 /* EmployersViewModel.swift in Sources */,
 				474D62EA2C6FAE2000EBF478 /* SceneDelegate.swift in Sources */,

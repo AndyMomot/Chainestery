@@ -11,5 +11,6 @@ extension HomeView {
     final class HomeViewModel: ObservableObject {
         @Published var showEmployers = false
         @Published var showOrders = false
+        @Published var showNotes = false
     }
 }

@@ -19,6 +19,7 @@ struct OrderModel: Identifiable, Codable, Hashable {
     var employer: EmployerModel?
     var workStartedDate: Date?
     var status: Status = .new
+    var note: String?
     
     var progress: CGFloat {
         guard let startDate = workStartedDate else {

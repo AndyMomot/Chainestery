@@ -25,7 +25,7 @@ struct NavigationBackButtonView: View {
                     .font(Fonts.KulimPark.semiBold.swiftUIFont(size: 30))
             }
 
-            Spacer()
+            Spacer(minLength: 20)
             
             Text(title)
                 .foregroundStyle(color)
