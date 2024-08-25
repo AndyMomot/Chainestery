@@ -100,6 +100,7 @@ struct AddOrderView: View {
                 .padding(.horizontal, bounds.width * 0.22)
             }
         }
+        .hideKeyboardWhenTappedAround()
         .sheet(isPresented: $viewModel.showImagePicker) {
             ImagePicker(selectedImage: $viewModel.selectedImage)
         }

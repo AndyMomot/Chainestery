@@ -166,6 +166,7 @@ struct AddEmployerView: View {
                 .padding(.horizontal)
             }
         }
+        .hideKeyboardWhenTappedAround()
         .onAppear {
             viewModel.setView(state: self.viewState)
         }

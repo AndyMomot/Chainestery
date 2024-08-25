@@ -62,7 +62,7 @@ struct HomeView: View {
                         }
                         
                         HomeButtonView(imageName: Asset.statistic.name) {
-                            
+                            viewModel.showIncomeLoss.toggle()
                         }
                         .frame(height: buttonWidth)
                         
@@ -82,6 +82,10 @@ struct HomeView: View {
             }
             .navigationDestination(isPresented: $viewModel.showOrders) {
                 OrdersView()
+                    .navigationBarBackButtonHidden()
+            }
+            .navigationDestination(isPresented: $viewModel.showIncomeLoss) {
+                IncomeLossView()
                     .navigationBarBackButtonHidden()
             }
             .navigationDestination(isPresented: $viewModel.showNotes) {

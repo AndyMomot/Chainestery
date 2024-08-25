@@ -17,7 +17,7 @@ struct ChartView: View {
             HStack(spacing: 25) {
                 if data.isEmpty {
                     Spacer()
-                    Text("Не данных")
+                    Text("Нет данных")
                         .foregroundStyle(.black)
                         .font(Fonts.KulimPark.light.swiftUIFont(size: 18))
                     Spacer()
@@ -26,15 +26,17 @@ struct ChartView: View {
                     Chart {
                         ForEach(data, id: \.day.id) { item in
                             BarMark(x: .value("Day", item.day.rawValue),
-                                    y: .value("Income", item.income),
-                                    width: .fixed(24))
-                            .foregroundStyle(Colors.emeraldSurge.swiftUIColor)
-                            .cornerRadius(8)
+                                    y: .value("Loss", item.loss),
+                                    width: .fixed(24),
+                                    stacking: .normalized)
+                            .foregroundStyle(Colors.redC.swiftUIColor)
+                            .cornerRadius(4)
                             
                             BarMark(x: .value("Day", item.day.rawValue),
-                                    y: .value("Loss", item.loss),
-                                    width: .fixed(24))
-                            .foregroundStyle(Colors.redC.swiftUIColor)
+                                    y: .value("Income", item.income),
+                                    width: .fixed(24),
+                                    stacking: .normalized)
+                            .foregroundStyle(Colors.emeraldSurge.swiftUIColor)
                             .cornerRadius(8)
                         }
                     }
@@ -105,20 +107,11 @@ struct ChartView: View {
             .ignoresSafeArea()
             .opacity(0.2)
         
-//        ChartView(data: [
-//            .init(id: 1, day: "ПН", income: 100, loss: 50),
-//            .init(id: 1, day: "ВТ", income: 241, loss: 120),
-//            .init(id: 1, day: "СР", income: 170, loss: 200),
-//            .init(id: 1, day: "ЧТ", income: 155, loss: 50),
-//            .init(id: 1, day: "ПТ", income: 100, loss: 90),
-//            .init(id: 1, day: "СБ", income: 250, loss: 133),
-//            .init(id: 1, day: "ВС", income: 300, loss: 99),
-//            
-//        ]) {}
-//            .frame(maxHeight: 285)
-//            .padding(.horizontal)
-        
-        ChartView(data: []) {}
+        ChartView(data: [
+            .init(day: .monday, income: 100, loss: 100),
+            .init(day: .tuesday, income: 99, loss: 40),
+            
+        ]) {}
             .frame(maxHeight: 285)
             .padding(.horizontal)
     }

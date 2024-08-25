@@ -65,6 +65,7 @@ struct OrderNotesView: View {
             }
             .padding(.horizontal)
         }
+        .hideKeyboardWhenTappedAround()
         .onAppear {
             viewModel.getOrders()
         }

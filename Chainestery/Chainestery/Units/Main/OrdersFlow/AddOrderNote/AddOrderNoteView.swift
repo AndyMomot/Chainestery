@@ -120,6 +120,7 @@ struct AddOrderNoteView: View {
                 .scrollIndicators(.never)
             }
         }
+        .hideKeyboardWhenTappedAround()
         .onAppear {
             if let note = item.note {
                 viewModel.text = note

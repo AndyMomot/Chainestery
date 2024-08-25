@@ -26,6 +26,7 @@
 		47199CEF2C7A0F7C00A3663C /* IncomeLossViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CEE2C7A0F7C00A3663C /* IncomeLossViewModel.swift */; };
 		47199CF32C7A115A00A3663C /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CF22C7A115A00A3663C /* ChartView.swift */; };
 		47199CF62C7A269300A3663C /* IncomeLossTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CF52C7A269300A3663C /* IncomeLossTextField.swift */; };
+		47199CF92C7B22DB00A3663C /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47199CF82C7B22DB00A3663C /* StatisticView.swift */; };
 		474D62E82C6FAE2000EBF478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62E72C6FAE2000EBF478 /* AppDelegate.swift */; };
 		474D62EA2C6FAE2000EBF478 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62E92C6FAE2000EBF478 /* SceneDelegate.swift */; };
 		474D62EC2C6FAE2000EBF478 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474D62EB2C6FAE2000EBF478 /* RootViewController.swift */; };
@@ -104,6 +105,7 @@
 		47199CEE2C7A0F7C00A3663C /* IncomeLossViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeLossViewModel.swift; sourceTree = "<group>"; };
 		47199CF22C7A115A00A3663C /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		47199CF52C7A269300A3663C /* IncomeLossTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeLossTextField.swift; sourceTree = "<group>"; };
+		47199CF82C7B22DB00A3663C /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		474D62E42C6FAE2000EBF478 /* Chainestery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chainestery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		474D62E72C6FAE2000EBF478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		474D62E92C6FAE2000EBF478 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			children = (
 				47199CF12C7A114D00A3663C /* ChartView */,
 				47199CF42C7A268200A3663C /* IncomeLossTextField */,
+				47199CF72C7B22CE00A3663C /* Statistic */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -300,6 +303,14 @@
 				47199CF52C7A269300A3663C /* IncomeLossTextField.swift */,
 			);
 			path = IncomeLossTextField;
+			sourceTree = "<group>";
+		};
+		47199CF72C7B22CE00A3663C /* Statistic */ = {
+			isa = PBXGroup;
+			children = (
+				47199CF82C7B22DB00A3663C /* StatisticView.swift */,
+			);
+			path = Statistic;
 			sourceTree = "<group>";
 		};
 		474D62DB2C6FAE2000EBF478 = {
@@ -811,6 +822,7 @@
 				476894502C70B4F1007FDE48 /* EmployersViewModel.swift in Sources */,
 				474D62EA2C6FAE2000EBF478 /* SceneDelegate.swift in Sources */,
 				470E47F82C76595A00CE59D9 /* CustomAlertView.swift in Sources */,
+				47199CF92C7B22DB00A3663C /* StatisticView.swift in Sources */,
 				476894822C720F5B007FDE48 /* InputFieldView.swift in Sources */,
 				476894592C720010007FDE48 /* AddEmployerView.swift in Sources */,
 				476894402C7097AA007FDE48 /* PrivacyPolicyView.swift in Sources */,

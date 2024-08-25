@@ -31,11 +31,93 @@ extension IncomeLossView {
         
         @Published var sundayIncome = ""
         @Published var sundayLoss = ""
+        
+        @Published var totalIncome: Int = .zero
+        @Published var totalLose: Int = .zero
+        @Published var showStatistic = false
+        
+        func getIncomeLossData() {
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                self.data = DefaultsService.incomeLoss
+                self.setTitles()
+                self.calculateTotalCostsAndLoss()
+            }
+        }
+        
+        func setTitles() {
+            guard !data.isEmpty else { return }
+            
+            if let monday = data.first(where: { $0.day == .monday}) {
+                mondayIncome = "\(monday.income)"
+                mondayLoss = "\(monday.loss)"
+            }
+            
+            
+            if let tuesday = data.first(where: { $0.day == .tuesday}) {
+                tuesdayIncome = "\(tuesday.income)"
+                tuesdayLoss = "\(tuesday.loss)"
+            }
+            
+            if let wednesday = data.first(where: { $0.day == .wednesday}) {
+                wednesdayIncome = "\(wednesday.income)"
+                wednesdayLoss = "\(wednesday.loss)"
+            }
+            
+            if let thursday = data.first(where: { $0.day == .thursday}) {
+                thursdayIncome = "\(thursday.income)"
+                thursdayLoss = "\(thursday.loss)"
+            }
+            
+            if let friday = data.first(where: { $0.day == .friday}) {
+                fridayIncome = "\(friday.income)"
+                fridayLoss = "\(friday.loss)"
+            }
+            
+            if let saturday = data.first(where: { $0.day == .saturday}) {
+                saturdayIncome = "\(saturday.income)"
+                saturdayLoss = "\(saturday.loss)"
+            }
+            
+            if let sunday = data.first(where: { $0.day == .sunday}) {
+                sundayIncome = "\(sunday.income)"
+                sundayLoss = "\(sunday.loss)"
+            }
+        }
+        
+        func calculateTotalCostsAndLoss() {
+            totalIncome = data.map {$0.income}.reduce(0) { $0 + $1 }
+            totalLose = data.map {$0.loss}.reduce(0) { $0 + $1 }
+        }
+        
+        func onValueChanged(model: IncomeLossDataModel) {
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                var incomeLoss = self.data
+                
+                if let index = incomeLoss.firstIndex(where: { $0.day == model.day }) {
+                    incomeLoss[index] = model
+                } else {
+                    incomeLoss.append(model)
+                }
+                
+                incomeLoss.sort(by: { $0.day.id < $1.day.id })
+                self.data = incomeLoss
+                self.calculateTotalCostsAndLoss()
+            }
+        }
+        
+        func onSave() {
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                DefaultsService.incomeLoss = self.data
+            }
+        }
     }
 }
 
 extension IncomeLossView {
-    struct IncomeLossDataModel {
+    struct IncomeLossDataModel: Codable {
         var day: Day
         var income: Int
         var loss: Int
