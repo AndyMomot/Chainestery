@@ -7,7 +7,6 @@ extension OnboardingView {
     final class OnboardingViewModel: ObservableObject {
         @Published var isAnimatingImageOpacity = false
         @Published var showPrivacyPolicy = false
-        let privacyPolicyURL = URL(string: "https://tradifundint.info")
         
         func showPrivacyFlow(rootViewModel: RootContentView.RootContentViewModel) {
             DispatchQueue.main.async {

@@ -104,14 +104,24 @@ struct PrivacyPolicyView: View {
                         }
                     }
 
-                    Text("Вы даёте своё согласие на обработку персональных данных.")
-                        .foregroundStyle(.white)
-                        .font(Fonts.KulimPark.regular.swiftUIFont(size: 15))
+                    Button {
+                        viewModel.showPrivacyPolicy.toggle()
+                    } label: {
+                        Text("Вы даёте своё согласие на обработку персональных данных.")
+                            .underline()
+                            .foregroundStyle(.white)
+                            .font(Fonts.KulimPark.regular.swiftUIFont(size: 15))
+                            .multilineTextAlignment(.leading)
+                    }
+
                 }
                 .padding(.horizontal, bounds.width * 0.14)
                 
                 Spacer()
             }
+        }
+        .sheet(isPresented: $viewModel.showPrivacyPolicy) {
+            SwiftUIViewWebView(url: viewModel.privacyPolicyURL)
         }
     }
 }
